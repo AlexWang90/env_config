@@ -87,9 +87,9 @@ map <F5> :call CompileRunGcc()<CR>
 
 " --------------------------------------状态栏----------------------------------------
 set laststatus=2                            "永远显示状态栏
-let g:airline_powerline_fonts = 1           " 支持 powerline 字体
 let g:airline#extensions#tabline#enabled = 1 " 显示窗口tab和buffer
-let g:AirlineTheme='murmur'
+"let g:airline_powerline_fonts = 1           " 支持 powerline 字体
+"let g:AirlineTheme='murmur'
 
 " ------------------------------------Python缩进------------------------------------------
 let g:indentLine_enabled = 1
