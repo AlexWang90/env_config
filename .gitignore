@@ -1,0 +1,13 @@
+__pycache__/
+build/
+develop-eggs/
+dist/
+MANIFEST
+*.manifest
+.cache
+.pytest_cache/
+.idea
+*.iml
+object_detect/ssd_mobilenet_v1_coco_2017_11_17/
+log.txt
+*.pyc

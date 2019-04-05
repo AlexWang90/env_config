@@ -1,0 +1,38 @@
+### vundle
+vundle是一款vim插件管理器,可以用来:
+1. 支持在.vimrc里面配置需要的插件
+2. 安装/更新/删除插件;
+3. 通过插件名称搜索vim scripts中的插件;
+
+安装vundle:
+https://github.com/VundleVim/Vundle.vim
+
+~/.vimrc添加插件的几种方式:
+```
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+
+" plugin on GitHub repo
+Plugin 'tpope/vim-fugitive'
+
+" plugin from http://vim-scripts.org/vim/scripts.html
+" Plugin 'L9'
+
+" Git plugin not hosted on GitHub
+Plugin 'git://git.wincent.com/command-t.git'
+" git repos on your local machine (i.e. when working on your own plugin)
+Plugin 'file:///home/gmarik/path/to/plugin'
+
+" The sparkup vim script is in a subdirectory of this repo called vim.
+" Pass the path to set the runtimepath properly.
+Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+" Install L9 and avoid a Naming conflict if you've already installed a
+" different version somewhere else.
+" Plugin 'ascenator/L9', {'name': 'newL9'}
+```
+
+安装插件:
+* 启动vim, 执行`:PluginInstall`
+* 在命令行运行:`vim +PluginInstall +qall`
+
+帮助文档: 启动vim,执行 `:h vundle`

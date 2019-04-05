@@ -1,0 +1,15 @@
+### 代码补全
+
+### 语法检查
+
+### 自动提示
+
+### 调试
+
+### 编程界面
+1. 缩进 <br/>
+Yggdroot/indentLine
+
+Q: indentLine不生效,没有显示缩进符  <br/>
+A: Mac默认使用系统自带的vim, 使用brew install vim安装并重定向到新的vim即可.
+
