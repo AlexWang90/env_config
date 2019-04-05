@@ -8,6 +8,7 @@ def func_a():
         if b == 0:
             print('ddd')
 
+
 if __name__ == '__main__':
     print('hello python!')
 
