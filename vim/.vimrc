@@ -13,6 +13,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'Yggdroot/indentLine'                "缩进
 Plugin 'vim-airline/vim-airline'            "状态栏
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'vim-syntastic/syntastic'            "句法检查
 
 
 " All of your Plugins must be added before the following line
@@ -85,11 +86,31 @@ map <F5> :call CompileRunGcc()<CR>
         endif
     endfunc
 
+" --------------------------------------Buffer----------------------------------------
+"按Ctrl+h 向左移动一个buffer
+nnoremap <C-h> :bp<CR>
+"按Ctrl+l 向右移动一个buffer
+nnoremap <C-l> :bn<CR>
+"按Ctrl+^ 关闭当前buffer
+nnoremap <C-^> :bd<CR>
+
 " --------------------------------------状态栏----------------------------------------
 set laststatus=2                            "永远显示状态栏
 let g:airline#extensions#tabline#enabled = 1 " 显示窗口tab和buffer
 "let g:airline_powerline_fonts = 1           " 支持 powerline 字体
 "let g:AirlineTheme='murmur'
+
+
+" ------------------------------------句法检查------------------------------------------
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 0  "总是打开Location List（相当于QuickFix）窗口
+"自动打开Locaton List，默认值为2，表示发现错误时不自动打开，当修正以后没有再发现错误时自动关闭，置1表示自动打开
+let g:syntastic_auto_loc_list = 2
+let g:syntastic_check_on_open = 0              "如果等于1表示打开文件时自动进行检查
+let g:syntastic_check_on_wq = 0                "如果等于1表示进行实时检查
 
 " ------------------------------------Python缩进------------------------------------------
 let g:indentLine_enabled = 1
@@ -97,3 +118,4 @@ let g:indentLine_color_term = 239
 let g:indentLine_bgcolor_term = 0
 let g:indentLine_conceallevel = 1
 let g:indentLine_char_list = ['|', '¦', '┆', '┊'] "only works for utf-8 files
+

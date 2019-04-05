@@ -1,6 +1,38 @@
 ### 编程界面
 1. 状态栏 <br/>
-vim-airline/vim-airline : https://github.com/vim-airline/vim-airline <br/>
-vim-airline/vim-airline-themes <br/>
 
+* vim-airline/vim-airline : https://github.com/vim-airline/vim-airline <br/>
+* vim-airline/vim-airline-themes <br/>
 
+状态栏主题 : https://github.com/vim-airline/vim-airline/wiki/Screenshots <br/>
+
+缓存区打开文件: `:o filename` <br/>
+缓存区切换文件:
+```
+:bk  跳转到第k个文件
+:bn  跳到下一个文件
+:bp  跳到上一个文件
+
+设置映射键
+    "按Ctrl+h 向左移动一个buffer
+    nnoremap <C-h> :bp<CR>
+    "按Ctrl+l 向右移动一个buffer
+    nnoremap <C-l> :bn<CR>
+    "按Ctrl+^ 关闭当前buffer
+    nnoremap <C-^> :bd<CR>
+```
+
+### 句法检查
+1. vim-syntastic/syntastic
+```
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+```
+`:lclose` : 关闭location list
+`:lopen`  : 打开location list
