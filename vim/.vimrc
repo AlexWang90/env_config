@@ -15,7 +15,13 @@ Plugin 'vim-airline/vim-airline'            "状态栏
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vim-syntastic/syntastic'            "句法检查
 Plugin 'majutsushi/tagbar'                  "tag信息
-"Plugin 'tmhedberg/SimpylFold'               "python代码折叠
+"Plugin 'tmhedberg/SimpylFold'              "python代码折叠
+Plugin 'SirVer/ultisnips'                   "snippets
+Plugin 'honza/vim-snippets'
+Plugin 'Valloric/YouCompleteMe'             "自动代码补全
+Plugin 'scrooloose/nerdcommenter'           "注释
+Plugin 'scrooloose/nerdtree'                "文件导航
+Plugin 'tell-k/vim-autopep8'                "pep8
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -91,6 +97,9 @@ map <F5> :call CompileRunGcc()<CR>
         endif
     endfunc
 
+map <C-n> :NERDTreeToggle<CR>                       "打开/关闭文件导航
+autocmd FileType python noremap <buffer> <F8> :call Autopep8()<CR>          "pep8
+
 " --------------------------------------Buffer----------------------------------------
 "按Ctrl+h 向左移动一个buffer
 nnoremap <C-h> :bp<CR>
@@ -120,9 +129,16 @@ let g:syntastic_auto_loc_list = 2
 let g:syntastic_check_on_open = 0              "如果等于1表示打开文件时自动进行检查
 let g:syntastic_check_on_wq = 0                "如果等于1表示进行实时检查
 
-" ------------------------------------Python缩进----------------------------------
+" ------------------------------------语法补充------------------------------------------
+let g:UltiSnipsExpandTrigger="<c-p>"                 "snippets
+"let g:UltiSnipsJumpForwardTrigger="<c-f>"
+"let g:UltiSnipsJumpBackwardTrigger="<c-b>"
+
+" ------------------------------------Python缩进/pep8----------------------------------
 let g:indentLine_enabled = 1
 let g:indentLine_color_term = 239
 let g:indentLine_bgcolor_term = 0
 let g:indentLine_conceallevel = 1
 let g:indentLine_char_list = ['|', '¦', '┆', '┊'] "only works for utf-8 files
+
+et g:autopep8_disable_show_diff=1                    "autopep8设置

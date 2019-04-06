@@ -13,3 +13,12 @@ Yggdroot/indentLine
 Q: indentLine不生效,没有显示缩进符  <br/>
 A: Mac默认使用系统自带的vim, 使用brew install vim安装并重定向到新的vim即可.
 
+2. 代码折叠
+* tmhedberg/SimpylFold
+
+3. pep8标准化
+* tell-k/vim-autopep8 : https://github.com/tell-k/vim-autopep8 <br/>
+
+```
+autocmd FileType python noremap <buffer> <F8> :call Autopep8()<CR>
+```

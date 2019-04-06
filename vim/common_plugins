@@ -25,7 +25,7 @@
 
 3. tags信息 <br/>
 * majutsushi/tagbar
-Image: ![tagbar](https://camo.githubusercontent.com/f5065c1dda4cbd6df6eed89c4086e31fc1774b2e/68747470733a2f2f692e696d6775722e636f6d2f6e3462705076332e706e67)
+![tagbar](https://camo.githubusercontent.com/f5065c1dda4cbd6df6eed89c4086e31fc1774b2e/68747470733a2f2f692e696d6775722e636f6d2f6e3462705076332e706e67)
 
 * 添加tagbar开关: `nmap <F8> :TagbarToggle<CR>`
 
@@ -62,8 +62,6 @@ Image: ![tagbar](https://camo.githubusercontent.com/f5065c1dda4cbd6df6eed89c4086
   配置vimrc
   let g:Tlist_Ctags_Cmd='/usr/local/Cellar/ctags/5.8_1/bin/ctags'
   ```
-4. 代码折叠
-* tmhedberg/SimpylFold
 
 ### 句法检查
 1. vim-syntastic/syntastic
@@ -79,3 +77,36 @@ let g:syntastic_check_on_wq = 0
 ```
 `:lclose` : 关闭location list <br/>
 `:lopen`  : 打开location list <br/>
+
+
+### 代码补全
+* Valloric/YouCompleteMe : https://github.com/Valloric/YouCompleteMe <br/>
+
+```
+cd ~/.vim/bundle/YouCompleteMe
+./install.py
+```
+
+### 重复代码
+* honza/vim-snippets : https://github.com/honza/vim-snippets <br/>
+* SirVer/ultisnips : https://github.com/SirVer/ultisnips <br/>
+
+ ![snippets](https://camo.githubusercontent.com/296aecf30e1607233814196db6bd3f5f47e70c73/68747470733a2f2f7261772e6769746875622e636f6d2f5369725665722f756c7469736e6970732f6d61737465722f646f632f64656d6f2e676966)
+
+
+### 注释
+* scrooloose/nerdcommenter : https://github.com/scrooloose/nerdcommenter <br/>
+
+```
+<leader>cc   加注释
+<leader>cu   解开注释
+<leader>ca 切换注释的样式:/*....*/和//..的切换
+<leader>c<space>  加上/解开注释, 智能判断
+<leader>cs  '性感的'注释(我很喜欢这个!)
+```
+
+### 导航栏
+* scrooloose/nerdtree : https://github.com/scrooloose/nerdtree
+
+启动/停止: `map <C-n> :NERDTreeToggle<CR>`
+
