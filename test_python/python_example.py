@@ -1,6 +1,7 @@
 def func_a():
     print('a')
     print('b')
+    a, b = 1, 2
     if a==0:
         print('abc')
         print('bcd')
@@ -11,5 +12,4 @@ def func_a():
 
 if __name__ == '__main__':
     print('hello python!')
-    print(c)
 

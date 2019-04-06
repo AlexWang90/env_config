@@ -14,7 +14,8 @@ Plugin 'Yggdroot/indentLine'                "缩进
 Plugin 'vim-airline/vim-airline'            "状态栏
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vim-syntastic/syntastic'            "句法检查
-
+Plugin 'majutsushi/tagbar'                  "tag信息
+"Plugin 'tmhedberg/SimpylFold'               "python代码折叠
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -54,7 +55,11 @@ set vb t_vb=
 
 
 " ------------------------------------shortcut------------------------------------------
-set pastetoggle=<F4>   ":set paste 和:set nopaste 之间切换
+"tagbar 开关
+nmap <F8> :TagbarToggle<CR>
+
+":set paste 和:set nopaste 之间切换
+set pastetoggle=<F4>
 
 """"""""""""""""""""""
 "Quickly Run
@@ -100,6 +105,9 @@ let g:airline#extensions#tabline#enabled = 1 " 显示窗口tab和buffer
 "let g:airline_powerline_fonts = 1           " 支持 powerline 字体
 "let g:AirlineTheme='murmur'
 
+" ------------------------------------tagbar------------------------------------------
+ let g:tagbar_autofocus = 1      "tagbar一打开，光标即在tagbar页面内
+let g:Tlist_Ctags_Cmd='/usr/local/Cellar/ctags/5.8_1/bin/ctags'   "tagbar
 
 " ------------------------------------句法检查------------------------------------------
 set statusline+=%#warningmsg#
@@ -112,10 +120,9 @@ let g:syntastic_auto_loc_list = 2
 let g:syntastic_check_on_open = 0              "如果等于1表示打开文件时自动进行检查
 let g:syntastic_check_on_wq = 0                "如果等于1表示进行实时检查
 
-" ------------------------------------Python缩进------------------------------------------
+" ------------------------------------Python缩进----------------------------------
 let g:indentLine_enabled = 1
 let g:indentLine_color_term = 239
 let g:indentLine_bgcolor_term = 0
 let g:indentLine_conceallevel = 1
 let g:indentLine_char_list = ['|', '¦', '┆', '┊'] "only works for utf-8 files
-
