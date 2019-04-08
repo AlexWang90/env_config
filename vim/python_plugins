@@ -16,6 +16,23 @@ A: Mac默认使用系统自带的vim, 使用brew install vim安装并重定向�
 2. 代码折叠
 * tmhedberg/SimpylFold
 
+```
+zc      折叠
+zC     对所在范围内所有嵌套的折叠点进行折叠
+zo      展开折叠
+zO     对所在范围内所有嵌套的折叠点展开
+[z       到当前打开的折叠的开始处。
+]z       到当前打开的折叠的末尾处。
+zj       向下移动。到达下一个折叠的开始处。关闭的折叠也被计入。
+zk      向上移动到前一折叠的结束处。关闭的折叠也被计入。
+za      如果折叠点折叠就打开，否则进行折叠
+zA      打开所有嵌套点，折叠所有嵌套的点
+zR      打开所有折叠
+zM      对所有折叠点进行折叠
+```
+
+set foldlevelstart=99   "打开文件时不自动折叠
+
 3. pep8标准化
 * tell-k/vim-autopep8 : https://github.com/tell-k/vim-autopep8 <br/>
 

@@ -14,14 +14,14 @@ Plugin 'Yggdroot/indentLine'                "缩进
 Plugin 'vim-airline/vim-airline'            "状态栏
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vim-syntastic/syntastic'            "句法检查
-Plugin 'majutsushi/tagbar'                  "tag信息
-"Plugin 'tmhedberg/SimpylFold'              "python代码折叠
-Plugin 'SirVer/ultisnips'                   "snippets
+Plugin 'majutsushi/tagbar'                  "tag信息 F7
+Plugin 'tmhedberg/SimpylFold'              "python代码折叠   za
+Plugin 'SirVer/ultisnips'                   "snippets重复代码 <c-p>
 Plugin 'honza/vim-snippets'
 Plugin 'Valloric/YouCompleteMe'             "自动代码补全
-Plugin 'scrooloose/nerdcommenter'           "注释
-Plugin 'scrooloose/nerdtree'                "文件导航
-Plugin 'tell-k/vim-autopep8'                "pep8
+Plugin 'scrooloose/nerdcommenter'           "注释    \cc \cu \c<space>
+Plugin 'scrooloose/nerdtree'                "文件导航 <c-n>
+Plugin 'tell-k/vim-autopep8'                "pep8    F8
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -48,10 +48,10 @@ set showmode            "左下角那一行的状态
 set nu                  "以在每一行的最前面显示行号
 set bg=dark             "显示的底色色调
 syntax on               "进行语法检验，颜色显示
-set tabstop=4          "tab=4空格
+set tabstop=4           "tab=4空格
 "set autoindent          "自动缩进
 set cursorline          "突出显示当前行"
-set noeb               "静音
+set noeb                "静音
 set vb t_vb=
 
 :set encoding=utf-8
@@ -62,7 +62,7 @@ set vb t_vb=
 
 " ------------------------------------shortcut------------------------------------------
 "tagbar 开关
-nmap <F8> :TagbarToggle<CR>
+nmap <F7> :TagbarToggle<CR>
 
 ":set paste 和:set nopaste 之间切换
 set pastetoggle=<F4>
@@ -142,3 +142,5 @@ let g:indentLine_conceallevel = 1
 let g:indentLine_char_list = ['|', '¦', '┆', '┊'] "only works for utf-8 files
 
 et g:autopep8_disable_show_diff=1                    "autopep8设置
+set foldlevelstart=99                                "打开文件时不自动折叠
+
