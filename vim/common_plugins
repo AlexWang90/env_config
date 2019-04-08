@@ -78,6 +78,14 @@ cd ~/.vim/bundle/YouCompleteMe
 ./install.py
 ```
 
+* 跳转到函数实现
+```
+nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
+退回: Ctrl+o
+前进: Ctrl+i
+```
+
 ### 重复代码
 * honza/vim-snippets : https://github.com/honza/vim-snippets <br/>
 * SirVer/ultisnips : https://github.com/SirVer/ultisnips <br/>

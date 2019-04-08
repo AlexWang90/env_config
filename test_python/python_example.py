@@ -24,3 +24,7 @@ def func_a():
 
 if __name__ == '__main__':
     print('hello python!')
+    test_one = TestClass
+
+    
+

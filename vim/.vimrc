@@ -13,7 +13,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'Yggdroot/indentLine'                "缩进
 Plugin 'vim-airline/vim-airline'            "状态栏
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'vim-syntastic/syntastic'            "句法检查
+"Plugin 'vim-syntastic/syntastic'            "句法检查
 Plugin 'majutsushi/tagbar'                  "tag信息 F7
 Plugin 'tmhedberg/SimpylFold'              "python代码折叠   za
 Plugin 'SirVer/ultisnips'                   "snippets重复代码 <c-p>
@@ -53,6 +53,7 @@ set tabstop=4           "tab=4空格
 set cursorline          "突出显示当前行"
 set noeb                "静音
 set vb t_vb=
+hi PmenuSel ctermbg=lightblue       "提示menu背景色设置为浅蓝色
 
 :set encoding=utf-8
 :set fileencodings=ucs-bom,utf-8,cp936
@@ -133,6 +134,8 @@ let g:syntastic_check_on_wq = 0                "如果等于1表示进行实时�
 let g:UltiSnipsExpandTrigger="<c-p>"                 "snippets
 "let g:UltiSnipsJumpForwardTrigger="<c-f>"
 "let g:UltiSnipsJumpBackwardTrigger="<c-b>"
+
+nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>      "跳转到函数实现
 
 " ------------------------------------Python缩进/pep8----------------------------------
 let g:indentLine_enabled = 1
