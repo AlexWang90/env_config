@@ -13,7 +13,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'Yggdroot/indentLine'                "缩进
 Plugin 'vim-airline/vim-airline'            "状态栏
 Plugin 'vim-airline/vim-airline-themes'
-"Plugin 'vim-syntastic/syntastic'            "句法检查
+"Plugin 'vim-syntastic/syntastic'            "句法检查 
 Plugin 'majutsushi/tagbar'                  "tag信息 F7
 Plugin 'tmhedberg/SimpylFold'              "python代码折叠   za
 Plugin 'SirVer/ultisnips'                   "snippets重复代码 <c-p>
