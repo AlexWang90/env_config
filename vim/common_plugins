@@ -90,8 +90,36 @@ nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 * honza/vim-snippets : https://github.com/honza/vim-snippets <br/>
 * SirVer/ultisnips : https://github.com/SirVer/ultisnips <br/>
 
- ![snippets](https://camo.githubusercontent.com/296aecf30e1607233814196db6bd3f5f47e70c73/68747470733a2f2f7261772e6769746875622e636f6d2f5369725665722f756c7469736e6970732f6d61737465722f646f632f64656d6f2e676966)
+> 查看缩写对应的代码: .vim/bundle/vim-snippets/snippets, 例如python.snippets
 
+```
+python
+
+snippet epydoc
+	"""${1:Description}
+
+	@param ${2:param}: ${3: Description}
+	@type  $2: ${4: Type}
+
+	@return: ${5: Description}
+	@rtype : ${6: Type}
+
+	@raise e: ${0: Description}
+	"""
+
+snippet cl
+	class ${1:ClassName}(${2:object}):
+		"""${3:docstring for $1}"""
+		def __init__(self, ${4:arg}):
+			${5:super($1, self).__init__()}
+			self.$4 = $4
+			${0}
+
+snippet ifmain
+	if __name__ == '__main__':
+		${0:main()}
+
+```
 
 ### 注释
 * scrooloose/nerdcommenter : https://github.com/scrooloose/nerdcommenter <br/>
@@ -107,5 +135,6 @@ nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 ### 导航栏
 * scrooloose/nerdtree : https://github.com/scrooloose/nerdtree
 
-启动/停止: `map <C-n> :NERDTreeToggle<CR>`
-
+> 启动/停止: `map <C-n> :NERDTreeToggle<CR>`
+> 新建文件/目录: ma
+> 删除文件/目录: md
